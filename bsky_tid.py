@@ -175,13 +175,16 @@ class bsky_tid_obj:
     
     
     
-    def __init__(self):
+    def __init__(self,time_in: time = None):
 
         '''
         Standard init for now; might need to put some variables
         here (counter?)
         '''
-        self.epoch_fracSeconds = time.time() # grab systemtime at init
+        if time_in !=None:
+            self.epoch_fracSeconds = time_in
+        else: 
+            self.epoch_fracSeconds = time.time() # grab systemtime at init
         #print (epoch_fracSeconds = time.time())
 
     
@@ -189,7 +192,8 @@ class bsky_tid_obj:
         self.epoch_fracSeconds = time.time() # update from systime
         # print ("test: ", self.epoch_fracSeconds)
         return
-    
+
+  
         
     @classmethod
     def class_debug (cls):
