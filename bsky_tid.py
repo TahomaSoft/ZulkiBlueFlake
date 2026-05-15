@@ -214,6 +214,9 @@ class bsky_tid_obj:
         print("Time Generated is: ",self.tid_generate())
         return
     
+    def export_time_info(self):
+        return (self.tid_generate)
+    
     @staticmethod
     def static_test_method():
         print ('static method')
