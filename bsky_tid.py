@@ -215,7 +215,7 @@ class bsky_tid_obj:
         return
     
     def export_time_info(self):
-        return str(self.tid_generate)
+        return self.tid_generate()
     
     @staticmethod
     def static_test_method():
