@@ -13,6 +13,7 @@ https://atproto.com/specs/record-key
 
 import time
 import math
+import string
 
 STRING_LEN = 13
 
@@ -222,7 +223,7 @@ class bsky_tid_obj:
         print ('Time now: ', self.epoch_fracSeconds)
         return
         
-    def tid_generate(self):
+    def tid_generate(self)-> string:
         
         # epoch_uSeconds = math.trunc (time.time() * (10**7))
         # Deci-microseconds since unix epoch 
